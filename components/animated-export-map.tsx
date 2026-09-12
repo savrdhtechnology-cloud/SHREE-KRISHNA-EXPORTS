@@ -1,69 +1,69 @@
 'use client';
 
+const LAND_PATH = `M0,55L17,65L29,65L19,72L4,64L0,69L0,55ZM1000,69L987,70L995,71L998,78L955,86L950,93L954,99L935,118L933,98L959,78L945,84L946,79L935,81L931,89L896,89L876,104L893,109L890,124L875,143L866,144L854,156L859,172L851,175L851,174L849,156L836,160L839,152L827,158L831,165L841,164L831,172L839,192L824,214L815,213L806,223L804,218L796,221L793,228L803,241L803,254L791,263L778,247L776,261L790,288L773,265L772,236L762,238L754,215L744,216L723,239L722,258L715,265L703,216L697,222L685,205L649,201L636,188L633,192L642,209L657,202L666,216L653,234L621,249L597,191L595,198L590,190L600,166L576,167L572,157L593,148L615,150L602,137L609,130L598,133L602,137L594,140L593,134L584,133L576,147L581,152L563,154L567,162L564,167L554,149L538,135L534,141L551,155L547,154L545,162L544,155L524,140L509,144L494,166L484,169L474,159L474,145L496,143L497,133L487,126L527,109L524,96L530,94L530,107L554,106L560,95L568,96L565,89L584,86L560,84L559,77L571,69L563,66L549,76L553,87L545,91L544,100L536,102L530,87L516,91L520,84L514,83L520,83L521,82L514,79L530,74L526,74L550,54L568,48L610,58L615,62L609,65L589,62L604,73L602,68L623,66L620,56L629,58L628,63L650,55L666,57L669,52L690,58L685,48L699,42L705,57L692,63L700,65L707,56L713,55L714,59L719,60L716,56L711,54L705,55L708,42L711,48L731,46L728,50L732,53L732,46L724,39L789,25L816,32L812,32L815,34L797,39L793,42L846,39L858,41L864,49L889,47L891,42L941,49L948,55L989,52L1000,55L1000,69ZM589,184L618,253L624,257L641,252L643,257L609,309L613,344L596,361L599,376L575,409L556,413L533,355L539,331L524,295L527,279L517,278L511,270L476,277L453,250L453,218L485,169L495,172L527,164L528,177L553,189L560,180L589,184ZM267,254L279,262L277,268L262,259L257,247L212,230L181,183L196,213L188,208L156,159L154,126L159,131L160,125L145,117L139,100L133,101L124,88L120,92L94,82L78,89L86,81L57,102L46,104L64,90L50,91L39,81L53,70L33,67L55,64L37,57L65,47L124,56L144,50L202,64L200,59L206,57L198,58L205,55L235,61L241,54L232,49L238,45L257,62L262,52L271,53L274,61L268,64L247,66L259,68L248,74L239,72L248,75L236,89L242,97L271,103L278,117L278,105L287,99L283,78L307,83L303,86L309,93L321,85L331,103L341,105L331,109L338,106L345,113L306,127L302,132L321,124L314,128L331,137L318,143L321,135L309,139L306,149L290,156L292,161L289,165L289,157L285,160L286,165L289,166L290,170L273,185L278,201L276,207L268,190L256,187L249,189L252,190L252,193L236,191L228,199L234,229L246,230L249,221L259,220L253,238L268,241L267,254ZM296,476L297,459L290,454L298,447L295,422L305,357L289,344L274,308L286,280L278,261L287,266L301,250L301,262L306,251L311,257L328,256L337,271L357,278L361,289L354,299L359,296L362,302L372,296L376,305L389,303L403,318L392,337L386,369L365,381L365,392L350,413L338,407L340,424L319,434L323,440L312,452L317,458L309,465L310,474L296,476ZM917,422L891,424L884,411L883,414L880,415L883,409L883,405L878,414L864,402L828,414L820,412L817,369L836,360L850,341L860,346L867,331L879,334L876,345L891,354L896,330L927,392L917,422ZM376,86L357,74L362,71L354,68L360,67L351,65L360,63L351,65L360,59L351,60L360,59L351,58L360,52L348,49L360,51L356,46L345,46L349,43L344,36L331,30L310,31L302,27L316,26L297,24L317,20L323,17L313,16L328,11L341,13L333,10L386,9L372,7L377,6L439,8L405,11L436,10L431,15L464,11L441,15L455,15L443,17L451,17L439,24L449,28L437,29L446,32L437,33L447,36L439,36L443,40L423,41L440,50L421,45L429,47L419,50L439,51L409,56L403,64L386,68L376,86ZM917,328L902,319L896,325L886,322L884,312L872,303L869,307L867,303L872,300L865,296L872,296L875,305L883,298L901,306L917,328ZM819,307L806,303L803,289L825,269L831,275L825,281L831,290L819,307ZM625,381L622,353L637,334L640,346L631,379L625,381ZM317,79L296,70L283,71L300,63L286,52L251,48L265,49L262,42L273,39L275,45L285,42L304,48L301,52L310,50L305,53L313,53L305,53L315,55L307,56L330,63L324,69L311,63L321,75L308,73L317,79ZM794,313L782,304L765,274L788,292L795,304L794,313ZM878,177L864,175L878,170L893,150L891,170L878,177ZM219,51L174,52L190,51L173,50L180,46L171,43L182,40L201,46L203,40L219,51ZM505,112L484,120L493,114L485,114L493,109L487,99L484,102L486,91L495,94L489,100L505,112ZM245,12L323,7L330,9L272,25L282,29L251,29L259,27L255,25L265,27L271,24L259,22L274,20L260,16L288,14L245,12ZM832,310L833,291L848,287L834,292L835,298L843,296L837,299L841,308L835,302L832,310ZM972,453L963,452L963,449L984,434L972,453ZM817,323L800,320L792,316L808,315L817,323ZM986,434L986,421L985,421L980,412L996,423L986,434ZM354,129L335,128L345,115L342,122L354,129ZM292,224L273,215L270,215L267,218L264,218L267,215L275,213L292,224ZM844,248L835,245L835,229L840,230L838,243L844,248ZM463,69L437,73L441,71L433,69L440,67L432,67L460,64L463,69ZM847,273L844,266L839,269L848,259L852,268L847,273ZM478,114L471,114L476,112L472,106L483,103L478,114ZM905,143L889,150L894,136L905,143ZM894,135L893,113L896,105L902,125L897,124L899,133L894,135ZM310,229L302,232L293,230L299,229L298,224L310,229ZM180,40L158,48L150,45L154,37L180,40ZM723,272L721,265L723,259L727,269L723,272ZM906,443L902,433L911,434L911,442L906,443ZM256,36L231,28L280,35L256,36ZM319,482L315,483L300,481L308,481L304,475L309,474L319,482ZM690,30L649,39L691,28L690,30ZM275,74L269,72L258,74L262,66L275,74ZM192,34L173,34L181,29L198,33L197,28L207,32L188,36L182,36L192,34ZM238,21L249,20L232,16L240,12L264,20L238,21ZM543,28L539,26L547,24L538,24L548,23L530,19L560,22L543,28ZM863,186L860,178L864,176L867,180L863,186ZM836,217L834,212L838,206L839,207L836,217ZM923,307L916,315L912,312L923,307ZM264,47L258,48L250,47L260,38L264,39L264,47ZM231,46L224,47L215,42L231,39L226,41L231,46ZM660,49L643,45L657,41L653,45L660,49ZM542,167L535,164L535,162L543,161L542,167ZM238,42L235,38L249,38L238,42ZM883,35L886,30L904,33L896,32L899,35L883,35ZM230,33L223,32L214,32L226,29L230,33ZM169,27L180,27L159,31L169,27ZM778,21L758,19L778,18L778,21ZM575,17L566,20L549,17L563,16L575,17ZM225,55L228,52L236,56L232,57L225,55ZM225,24L210,23L207,20L221,21L225,24ZM779,24L785,19L793,22L779,24Z`;
+
+const COUNTRY_PATH = `M719,177L705,157L723,148L722,138L741,124L768,146L792,150L833,132L821,128L824,121L800,121M307,353L314,372L304,401L296,464L300,472M580,322L583,339L562,332L561,318L549,321L537,313M671,206L670,170L697,160L699,167L708,165M534,120L563,124M538,133L579,142M564,255L586,281L582,298L595,297L609,309M748,219L746,201L757,207L756,220M607,231L592,266L600,278L625,276L633,266L620,254M597,192L609,182L599,180M781,219L793,212L799,218M281,288L306,308L308,291M521,129L518,108M515,245L541,251L524,277M570,184L567,226L528,208L532,179M744,124L770,122L775,113L800,121M607,332L597,333M597,333L598,352L592,326L597,333M312,330L318,327L332,341L338,363M707,165L684,190L669,190M556,134L574,127L582,137M305,308L294,319L304,331L312,330M774,257L770,229L778,223M719,178L722,194L742,202M244,243L247,232L253,238M521,142L527,129M763,192L770,200L757,217M175,181L204,184L230,204M532,286L540,298L531,307M624,156L635,190M453,222L464,220L467,203L476,203L476,194L497,182L494,172M333,275L337,289L343,286L341,274M567,226L564,255L549,266M562,126L566,110L554,105M786,231L795,243M476,148L483,150L479,165M527,129L536,129L534,120M770,196L778,217M269,241L258,248M576,276L554,275L552,281M551,285L544,307L533,310M805,286L818,288L828,279M742,202L747,199M747,199L756,200L747,199M831,121L842,108L854,120M784,216L789,225M707,184L692,209M153,126L249,127M545,131L564,128M558,152L572,153M543,267L545,287L537,286M270,146L305,134M493,260L485,257L490,247M786,253L784,246L792,244M302,252L299,267L313,272M520,135L527,129M617,164L600,169M863,147L845,155M874,127L863,147M555,156L554,149M789,225L796,236M307,331L304,356M557,55L540,65L530,90M350,387L338,405M595,185L597,191M137,104L124,87L108,85L108,53M670,170L659,161L650,164M291,293L277,308M578,51L557,55L567,67M552,122L547,125M343,286L356,279M343,369L349,376L345,388M313,372L326,369L335,377M854,120L864,129L874,127M320,279L324,286L314,289M671,151L663,146L656,151M570,354L592,341M518,123L507,117M559,355L533,353M779,224L781,233M796,253L790,257M716,171L705,174L709,182M249,127L266,133L271,145M352,409L340,397M538,136L529,131M615,150L624,156M580,55L588,76M467,242L454,238M510,240L512,227L500,218M569,217L592,217M796,236L799,242M466,246L454,251M564,151L563,141M727,118L743,124M571,381L557,386M541,118L540,107M558,100L574,101M558,100L574,101M331,275L320,279M667,114L676,106M526,189L524,166M624,156L636,161M476,252L479,264M565,354L561,338L567,331M565,355L558,356L557,386M582,308L585,321L580,322M780,218L779,224M538,125L547,127M476,267L479,278M892,302L892,324M501,258L502,270M598,183L597,191M334,377L337,387M567,353L577,364M480,103L483,107M271,260L270,265M517,118L509,116M547,267L544,259M799,246L796,252M508,250L507,266M454,246L462,247L453,248M285,263L284,268M326,370L333,360L339,369M781,233L786,231M556,391L546,392M485,240L467,242M573,104L565,107M573,104L565,107M685,164L673,155M685,164L673,155M600,277L586,281M641,115L632,119M463,262L469,259L470,265M573,378L582,370M629,159L625,151M701,152L697,147M333,275L332,266M776,271L784,272M695,154L701,152M598,117L606,121M594,279L596,289M485,240L487,207L476,199M348,285L350,273M538,246L542,214M551,282L545,285M262,255L268,255M599,180L597,183M618,165L624,165M697,147L706,144M710,145L723,148M256,245L252,243M577,398L580,392M479,264L474,268M653,215L657,207M661,117L651,119M689,152L697,147M544,259L540,249M313,272L312,283M527,285L527,290M755,197L763,192M725,189L745,197M583,133L580,128M588,113L596,114M587,370L586,386L591,386M314,289L306,287M576,95L568,94M474,268L470,265M586,101L578,99M586,101L578,99M629,149L621,145M629,149L621,145M629,149L621,145M503,255L505,271M671,116L662,117M635,195L622,192M590,367L592,357M501,241L507,252M584,347L592,353M631,127L637,133M696,157L705,157M656,151L646,149M795,243L799,242M576,115L582,116M500,146L495,143M348,381L350,387M687,158L688,165M606,121L611,122M621,145L611,143M621,145L611,143M585,321L592,326M625,151L629,149M588,76L577,84M578,99L576,95M337,387L345,388M492,255L493,263M565,355L570,354M578,148L573,149M692,154L697,153M577,364L581,369M578,51L586,52M256,230L252,232M720,115L727,118M629,149L635,149M506,253L500,255M608,178L618,165M582,370L590,367M609,182L622,192M458,255L461,251M301,225L301,231M697,106L704,109M619,255L620,249M687,158L692,155M587,105L586,101M607,332L612,329M309,130L313,136M482,256L478,258M580,392L575,395M571,114L566,115M312,283L314,289M471,264L468,269M277,308L277,305M504,146L500,146M684,105L691,102M571,114L576,115M587,110L588,113M624,156L628,159M343,369L339,369M646,116L641,115M509,147L505,147M493,263L492,274M490,247L500,241M632,119L631,127M591,109L587,110M824,121L831,121M338,405L338,411M608,128L606,131M470,252L474,251M673,155L671,151M536,309L534,313M305,134L309,130M710,107L716,109M309,475L309,482M692,209L689,212M300,472L310,474M633,190L629,193M252,241L255,239M595,116L598,117M521,221L533,212M585,301L585,297M582,116L585,116M500,255L492,255M508,271L507,266M651,119L648,115M487,207L500,218M306,287L308,291M466,242L466,246M595,277L599,277M672,143L684,147M672,143L684,147M625,151L621,151M625,151L621,151M556,379L556,391M656,151L656,138M563,103L559,103M581,299L581,303M679,106L684,105M679,106L684,105M772,260L774,257M709,182L707,184M706,144L710,145M592,353L592,357M577,89L577,93M696,102L697,106M599,213L592,217M596,289L594,292M510,240L500,241M510,253L515,245M567,353L559,355M594,292L594,297M512,227L521,221M656,138L665,137M644,228L655,217L641,208M691,102L696,102M704,109L710,107M463,198L476,198M668,139L672,143M684,147L686,151M716,109L720,115M523,103L528,104M571,381L572,378M614,283L615,299M616,279L614,283M589,386L589,383M551,146L554,138L544,137L551,146M562,147L557,148M553,143L556,146M552,135L553,138M546,133L538,136M647,236L644,228L619,237M598,179L600,174M599,181L599,184M618,250L602,244M584,133L578,136M567,263L572,257L587,259L591,251L595,260`;
+
 const routes = [
-  { id: 'north-america', label: 'North America', x: 262, y: 155, lx: 172, ly: 126, path: 'M620 214 Q450 54 262 155', delay: '0s' },
-  { id: 'europe', label: 'Europe', x: 500, y: 147, lx: 514, ly: 121, path: 'M620 214 Q560 95 500 147', delay: '.25s' },
-  { id: 'middle-east', label: 'Middle East', x: 540, y: 205, lx: 487, ly: 225, path: 'M620 214 Q575 170 540 205', delay: '.5s' },
-  { id: 'africa', label: 'Africa', x: 470, y: 282, lx: 482, ly: 306, path: 'M620 214 Q525 215 470 282', delay: '.75s' },
-  { id: 'southeast-asia', label: 'Southeast Asia', x: 736, y: 180, lx: 750, ly: 153, path: 'M620 214 Q684 141 736 180', delay: '1s' },
-  { id: 'australia', label: 'Australia', x: 780, y: 326, lx: 792, ly: 350, path: 'M620 214 Q735 238 780 326', delay: '1.25s' },
+  { id: 'north-america', label: 'North America', x: 283, y: 155, lx: 160, ly: 134, w: 116, path: 'M717 221 Q500 34 283 155', delay: '0s' },
+  { id: 'europe', label: 'Europe', x: 528, y: 121, lx: 535, ly: 100, w: 76, path: 'M717 221 Q628 70 528 121', delay: '.3s' },
+  { id: 'middle-east', label: 'Middle East', x: 625, y: 200, lx: 505, ly: 208, w: 100, path: 'M717 221 Q675 170 625 200', delay: '.6s' },
+  { id: 'africa', label: 'Africa', x: 569, y: 335, lx: 575, ly: 346, w: 72, path: 'M717 221 Q625 260 569 335', delay: '.9s' },
+  { id: 'southeast-asia', label: 'Southeast Asia', x: 800, y: 241, lx: 808, ly: 221, w: 116, path: 'M717 221 Q780 172 800 241', delay: '1.2s' },
+  { id: 'australia', label: 'Australia', x: 875, y: 379, lx: 884, ly: 389, w: 84, path: 'M717 221 Q840 280 875 379', delay: '1.5s' },
 ] as const;
 
 export function AnimatedExportMap() {
   return (
-    <div className="relative min-h-[400px] overflow-visible bg-transparent sm:min-h-[440px] lg:min-h-[520px]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_68%_49%,rgba(214,170,57,.20),transparent_18%),radial-gradient(circle_at_48%_50%,rgba(11,74,43,.08),transparent_58%)]" />
-      <div className="pointer-events-none absolute right-[8%] top-[19%] h-[46%] w-[42%] rounded-full bg-[#E6C866]/10 blur-3xl" />
+    <div className="relative min-h-[390px] overflow-visible sm:min-h-[450px] lg:min-h-[520px]">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(225,180,52,.17),transparent_22%),radial-gradient(circle_at_52%_48%,rgba(18,67,45,.08),transparent_62%)]" />
 
       <svg
-        viewBox="0 0 920 440"
+        viewBox="0 0 1000 500"
         preserveAspectRatio="xMidYMid meet"
         role="img"
-        aria-label="Animated global export routes from India"
-        className="relative block h-auto w-full overflow-visible drop-shadow-[0_24px_50px_rgba(20,61,42,.08)]"
+        aria-label="Global export routes from India"
+        className="relative block h-auto w-full overflow-visible drop-shadow-[0_28px_65px_rgba(12,62,39,.08)]"
       >
         <defs>
-          <linearGradient id="landGreen" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="#557862" stopOpacity=".88" />
-            <stop offset=".42" stopColor="#2A5840" stopOpacity=".97" />
-            <stop offset="1" stopColor="#123D29" stopOpacity=".98" />
+          <linearGradient id="landGradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#5A7E66" />
+            <stop offset=".38" stopColor="#315D45" />
+            <stop offset="1" stopColor="#0E422B" />
           </linearGradient>
           <linearGradient id="routeGold" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0" stopColor="#FFE78D" stopOpacity=".7" />
-            <stop offset=".45" stopColor="#E7B229" />
-            <stop offset="1" stopColor="#FFF2A9" />
+            <stop offset="0" stopColor="#FFF0A3" />
+            <stop offset=".5" stopColor="#DDAA26" />
+            <stop offset="1" stopColor="#FFE77C" />
           </linearGradient>
           <radialGradient id="originGlow">
-            <stop offset="0" stopColor="#FFF0A4" stopOpacity="1" />
-            <stop offset=".38" stopColor="#EAB52B" stopOpacity=".55" />
-            <stop offset="1" stopColor="#EAB52B" stopOpacity="0" />
+            <stop offset="0" stopColor="#FFF2AA" stopOpacity="1" />
+            <stop offset=".42" stopColor="#E6B83B" stopOpacity=".52" />
+            <stop offset="1" stopColor="#E6B83B" stopOpacity="0" />
           </radialGradient>
-          <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
-            <feGaussianBlur stdDeviation="4.5" result="blur" />
+          <filter id="routeGlow" x="-120%" y="-120%" width="340%" height="340%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
             <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
           </filter>
-          <filter id="shadow" x="-60%" y="-60%" width="220%" height="240%">
-            <feDropShadow dx="0" dy="5" stdDeviation="6" floodColor="#102F22" floodOpacity=".16" />
+          <filter id="labelShadow" x="-60%" y="-80%" width="240%" height="260%">
+            <feDropShadow dx="0" dy="6" stdDeviation="8" floodColor="#173F2B" floodOpacity=".18" />
           </filter>
         </defs>
 
-        <g opacity=".10" stroke="#66806F" strokeWidth=".6">
-          <path d="M90 115H845"/><path d="M80 175H855"/><path d="M75 235H860"/><path d="M85 295H850"/>
+        <g opacity=".11" stroke="#96A792" strokeWidth=".7">
+          <path d="M45 120H955" /><path d="M30 205H970" /><path d="M25 290H975" /><path d="M70 375H930" />
+          <ellipse cx="500" cy="250" rx="450" ry="210" fill="none" />
+          <ellipse cx="500" cy="250" rx="335" ry="210" fill="none" />
+          <ellipse cx="500" cy="250" rx="205" ry="210" fill="none" />
         </g>
 
-        <g fill="url(#landGreen)" stroke="#6F8A73" strokeWidth=".75">
-          <path d="M74 102l48-35 66-20 60 8 44 23 30 42-24 20-31-9-21 18-25-1-16 24-25 14-31-11-11-29-26-5-26-24z"/>
-          <path d="M248 214l27 8 22 33 6 39-15 34-6 44-17 24-11-35-19-33-7-39 11-32z"/>
-          <path d="M397 94l31-22 46-9 29 10 16 19 35 5 17 15-10 19-32-2-17 10-33-2-22 13-24-9-18-20z"/>
-          <path d="M438 160l38-10 42 8 27 25 13 42-10 43-20 38-25 37-30-8-23-29-7-34-17-35 5-43z"/>
-          <path d="M539 94l43-25 75-23 73 8 57 30 48 25 10 32-24 29-37 4-28 22-37 4-23 27-38-16-19-33-44-13-15-26-47-15-18-22z"/>
-          <path d="M715 259l34 4 21 19 8 23-14 24-31 4-23-21-8-31z"/>
-          <path d="M780 316l41 4 24 22-7 25-47 10-29-19 3-23z"/>
-          <path d="M350 74l18-24 23 8 6 23-18 12z"/>
-        </g>
+        <path d={LAND_PATH} fill="url(#landGradient)" stroke="#6F8A73" strokeWidth=".7" opacity=".98" />
+        <path d={COUNTRY_PATH} fill="none" stroke="#CEB15B" strokeWidth=".62" strokeOpacity=".30" strokeLinecap="round" strokeLinejoin="round" />
 
-        <g opacity=".55" fill="#F6D66F">
-          <circle cx="333" cy="130" r="1.8"/><circle cx="300" cy="235" r="1.6"/><circle cx="430" cy="120" r="1.7"/><circle cx="560" cy="92" r="1.7"/><circle cx="680" cy="110" r="1.8"/><circle cx="760" cy="235" r="1.7"/><circle cx="620" cy="320" r="1.8"/><circle cx="173" cy="185" r="1.5"/><circle cx="820" cy="125" r="1.5"/>
+        <g fill="#E4B536" opacity=".78">
+          <circle cx="150" cy="118" r="1.7"/><circle cx="227" cy="208" r="1.5"/><circle cx="338" cy="325" r="1.6"/>
+          <circle cx="535" cy="136" r="1.5"/><circle cx="620" cy="104" r="1.6"/><circle cx="755" cy="130" r="1.6"/>
+          <circle cx="842" cy="205" r="1.6"/><circle cx="885" cy="303" r="1.5"/><circle cx="575" cy="305" r="1.5"/>
         </g>
 
         {routes.map((route) => (
@@ -72,50 +72,52 @@ export function AnimatedExportMap() {
               d={route.path}
               fill="none"
               stroke="url(#routeGold)"
-              strokeWidth="2.15"
+              strokeWidth="2.2"
               strokeLinecap="round"
-              strokeDasharray="3 5.5"
+              strokeDasharray="3.5 5.5"
               className="route-line"
               style={{ animationDelay: route.delay }}
             />
-            <circle r="4.2" fill="#FFD45D" filter="url(#softGlow)">
-              <animateMotion dur="4.7s" begin={route.delay} repeatCount="indefinite" path={route.path} />
+            <circle r="4.2" fill="#FFD65D" filter="url(#routeGlow)">
+              <animateMotion dur="4.8s" begin={route.delay} repeatCount="indefinite" path={route.path} />
             </circle>
-            <circle cx={route.x} cy={route.y} r="8" fill="#FFF8D7" stroke="#D7A51F" strokeWidth="3" filter="url(#softGlow)" />
-            <circle cx={route.x} cy={route.y} r="14" fill="none" stroke="#E0B137" strokeWidth="1.4" className="pulse-ring" style={{ animationDelay: route.delay }} />
-            <g transform={`translate(${route.lx} ${route.ly})`} className="label-in" style={{ animationDelay: route.delay }} filter="url(#shadow)">
-              <rect x="-8" y="-17" width={Math.max(72, route.label.length * 6.5 + 24)} height="30" rx="15" fill="#FFFDF4" fillOpacity=".97" />
-              <text x="8" y="3" fill="#173F2B" fontSize="11.5" fontWeight="700" fontFamily="Arial, sans-serif">{route.label}</text>
+            <circle cx={route.x} cy={route.y} r="8" fill="#FFF9D8" stroke="#D5A11C" strokeWidth="3" filter="url(#routeGlow)" />
+            <circle cx={route.x} cy={route.y} r="14" fill="none" stroke="#E4B23C" strokeWidth="1.3" className="destination-ring" style={{ animationDelay: route.delay }} />
+            <g className="market-label" style={{ animationDelay: route.delay }} filter="url(#labelShadow)">
+              <rect x={route.lx} y={route.ly} width={route.w} height="31" rx="15.5" fill="#FFFDF6" fillOpacity=".96" />
+              <text x={route.lx + 14} y={route.ly + 20} fill="#173F2B" fontSize="12" fontWeight="700" fontFamily="Arial, sans-serif">
+                {route.label}
+              </text>
             </g>
           </g>
         ))}
 
-        <g transform="translate(620 214)">
-          <circle r="64" fill="url(#originGlow)" className="origin-glow" />
-          <circle r="28" fill="none" stroke="#EBC252" strokeWidth="1" opacity=".55" />
-          <circle r="43" fill="none" stroke="#EBC252" strokeWidth="1" opacity=".32" />
-          <circle r="58" fill="none" stroke="#EBC252" strokeWidth="1" opacity=".18" />
-          <path d="M-15 -33 L6 -27 L17 -15 L14 -2 L22 7 L15 18 L8 34 L-2 42 L-7 27 L-16 17 L-22 1 L-16 -10 L-22 -19 Z" fill="#FFF6D2" stroke="#E3B83F" strokeWidth="2" filter="url(#softGlow)" />
-          <circle r="7" fill="#FFF8D6" stroke="#E5AE1D" strokeWidth="3" />
+        <g transform="translate(717 221)">
+          <circle r="72" fill="url(#originGlow)" className="origin-glow" />
+          <circle r="30" fill="none" stroke="#EBC75D" strokeWidth="1" opacity=".55" />
+          <circle r="47" fill="none" stroke="#EBC75D" strokeWidth="1" opacity=".30" />
+          <circle r="63" fill="none" stroke="#EBC75D" strokeWidth="1" opacity=".16" />
+          <path d="M-10 -34 L8 -29 L18 -18 L14 -5 L23 5 L17 17 L11 31 L1 43 L-6 29 L-16 18 L-20 3 L-15 -9 L-20 -19 Z" fill="#FFF7D6" stroke="#E1B437" strokeWidth="2.1" filter="url(#routeGlow)" />
+          <circle r="7" fill="#FFF8D6" stroke="#E4AB19" strokeWidth="3" />
         </g>
 
-        <g transform="translate(646 228)" filter="url(#shadow)">
-          <rect width="116" height="50" rx="8" fill="#0B4A2B" />
-          <text x="13" y="19" fill="#F3C94F" fontSize="10" fontWeight="800" letterSpacing="1.4" fontFamily="Arial, sans-serif">INDIA</text>
-          <text x="13" y="36" fill="#FFFFFF" fontSize="11.5" fontWeight="700" fontFamily="Arial, sans-serif">Export Origin</text>
+        <g transform="translate(736 229)" filter="url(#labelShadow)">
+          <rect width="119" height="52" rx="8" fill="#0A4D2F" />
+          <text x="14" y="19" fill="#F2C94C" fontSize="10" fontWeight="800" letterSpacing="1.5" fontFamily="Arial, sans-serif">INDIA</text>
+          <text x="14" y="37" fill="#FFFFFF" fontSize="11.5" fontWeight="700" fontFamily="Arial, sans-serif">Export Origin</text>
         </g>
       </svg>
 
       <style jsx>{`
-        .route-line { animation: dashFlow 2.4s linear infinite; }
-        .pulse-ring { animation: ringPulse 2.5s ease-out infinite; transform-box: fill-box; transform-origin: center; }
-        .origin-glow { animation: originPulse 2.3s ease-out infinite; transform-box: fill-box; transform-origin: center; }
-        .label-in { opacity: 0; animation: labelIn .7s ease forwards; }
-        @keyframes dashFlow { to { stroke-dashoffset: -28; } }
-        @keyframes ringPulse { 0% { transform: scale(.7); opacity: .9; } 80%,100% { transform: scale(1.55); opacity: 0; } }
-        @keyframes originPulse { 0% { transform: scale(.72); opacity: .5; } 100% { transform: scale(1.48); opacity: 0; } }
-        @keyframes labelIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-        @media (prefers-reduced-motion: reduce) { .route-line,.pulse-ring,.origin-glow,.label-in { animation: none !important; opacity: 1; } }
+        .route-line { animation: dashFlow 2.35s linear infinite; }
+        .destination-ring { animation: ringPulse 2.6s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+        .origin-glow { animation: originPulse 2.35s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+        .market-label { opacity: 0; animation: labelIn .72s ease forwards; }
+        @keyframes dashFlow { to { stroke-dashoffset: -30; } }
+        @keyframes ringPulse { 0% { transform: scale(.72); opacity: .8; } 80%,100% { transform: scale(1.55); opacity: 0; } }
+        @keyframes originPulse { 0% { transform: scale(.76); opacity: .48; } 100% { transform: scale(1.5); opacity: 0; } }
+        @keyframes labelIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        @media (prefers-reduced-motion: reduce) { .route-line,.destination-ring,.origin-glow,.market-label { animation: none !important; opacity: 1; } }
       `}</style>
     </div>
   );
