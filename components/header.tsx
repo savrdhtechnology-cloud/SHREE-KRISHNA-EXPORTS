@@ -55,7 +55,7 @@ export function Header() {
                 <Link
                   key={href}
                   href={href}
-                  className={`relative whitespace-nowrap text-[11.5px] font-medium tracking-[.01em] transition-colors duration-300 ${
+                  className={`group relative whitespace-nowrap text-[11.5px] font-medium tracking-[.01em] transition-colors duration-300 ${
                     overHero
                       ? active
                         ? 'text-[#E9C86A]'
