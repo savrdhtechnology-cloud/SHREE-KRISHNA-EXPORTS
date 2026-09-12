@@ -12,5 +12,5 @@ export const company = {
   description:
     'Established in 1998, Shree Krishna Exports is a Karnal-based manufacturer and exporter of Indian Basmati, Non-Basmati and pesticide-free rice with an integrated sourcing, processing, quality-control, packaging and export supply chain.',
   certifications: ['ISO 9001:2015', 'ISO 22000:2005', 'FSSAI', 'BRC', 'SGS', 'USDA Organic', 'India Organic'],
-  markets: ['Middle East', 'Europe', 'North America', 'Africa', 'Australia', 'Southeast Asia'],
+  markets: ['UAE', 'Middle East', 'Europe', 'North America', 'Africa', 'Australia', 'Southeast Asia'],
 } as const;
