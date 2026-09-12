@@ -10,17 +10,16 @@ export function Logo({ light = false, footer = false }: LogoProps) {
   return (
     <Link href="/" className="flex shrink-0 items-center" aria-label="Shree Krishna Exports home">
       <Image
-        src="/api/brand-logo"
+        src="/images/shree-krishna-exports-logo.png"
         alt="Shree Krishna Exports - Premium Indian Rice Since 1998"
-        width={600}
-        height={176}
+        width={1200}
+        height={300}
         priority={!footer}
-        unoptimized
         className={`h-auto object-contain ${
           footer
-            ? 'w-[230px] sm:w-[260px] drop-shadow-[0_1px_1px_rgba(255,255,255,.35)]'
-            : 'w-[160px] sm:w-[200px] lg:w-[220px]'
-        } ${light ? 'drop-shadow-[0_2px_5px_rgba(0,0,0,.28)]' : ''}`}
+            ? 'w-[240px] sm:w-[270px] lg:w-[300px]'
+            : 'w-[210px] sm:w-[240px] lg:w-[280px]'
+        } ${light ? 'drop-shadow-[0_2px_5px_rgba(0,0,0,.22)]' : ''}`}
       />
     </Link>
   );
