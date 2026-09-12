@@ -7,7 +7,7 @@ import { AnimatedExportMap } from '@/components/animated-export-map';
 
 export const metadata: Metadata = {
   title: 'Global Export',
-  description: 'Shree Krishna Exports supplies Indian Basmati and Non-Basmati rice to global markets.',
+  description: 'Shree Krishna Exports supplies Indian Basmati and Non-Basmati rice to UAE and global markets.',
 };
 
 const exportFeatures = [
@@ -33,7 +33,7 @@ export default function Export() {
     <>
       <PageHero
         eyebrow="GLOBAL EXPORT"
-        title="From India to Global Markets."
+        title="From India to UAE & Global Markets."
         description="International rice supply backed by product choice, quality systems, export documentation and dependable logistics."
       />
 
@@ -43,7 +43,7 @@ export default function Export() {
             <div>
               <Globe2 size={42} className="text-[#0B4A2B]" />
               <h2 className="mt-4 font-serif text-5xl font-semibold leading-[.95]">Export experience across major consuming regions.</h2>
-              <p className="mt-5 text-[14px] leading-7 text-[#68726b]">The company website references business across the USA / North America, Africa, Europe, Australia, the Middle East and multiple Asian markets.</p>
+              <p className="mt-5 text-[14px] leading-7 text-[#68726b]">Our export network includes the UAE as a key destination, together with the wider Middle East, North America, Africa, Europe, Australia and multiple Asian markets.</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {company.markets.map((market) => (
                   <span key={market} className="border border-[#D7CFBB] bg-white px-4 py-2 text-[11px] font-semibold transition duration-300 hover:-translate-y-0.5 hover:border-[#D4A63A]">{market}</span>
