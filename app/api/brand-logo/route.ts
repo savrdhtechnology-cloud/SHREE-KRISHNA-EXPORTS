@@ -10,12 +10,24 @@ export async function GET() {
     return new Response('Logo unavailable', { status: 502 });
   }
 
-  const logo = await upstream.arrayBuffer();
+  const svg = await upstream.text();
+  const match = svg.match(/base64,([^"']+)/);
 
-  return new Response(logo, {
+  if (!match) {
+    return new Response('Logo data unavailable', { status: 502 });
+  }
+
+  const binary = atob(match[1]);
+  const bytes = new Uint8Array(binary.length);
+
+  for (let i = 0; i < binary.length; i += 1) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+
+  return new Response(bytes, {
     status: 200,
     headers: {
-      'Content-Type': 'image/svg+xml; charset=utf-8',
+      'Content-Type': 'image/png',
       'Cache-Control': 'public, max-age=86400, s-maxage=86400',
     },
   });
