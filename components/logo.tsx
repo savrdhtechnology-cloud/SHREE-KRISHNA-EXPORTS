@@ -3,20 +3,24 @@ import Link from 'next/link';
 
 type LogoProps = {
   light?: boolean;
+  footer?: boolean;
 };
 
-export function Logo({ light = false }: LogoProps) {
+export function Logo({ light = false, footer = false }: LogoProps) {
   return (
-    <Link href="/" className="flex shrink-0 items-center gap-3" aria-label="Shree Krishna Exports home">
-      <Image src="/images/logo-mark.svg" alt="SB Rice Mill logo" width={46} height={46} priority />
-      <span className="hidden leading-none sm:block">
-        <strong className={`font-serif text-[17px] font-semibold tracking-[.015em] transition-colors duration-300 ${light ? 'text-white' : 'text-[#123D2A]'}`}>
-          SHREE KRISHNA EXPORTS
-        </strong>
-        <small className={`mt-1.5 block text-[8px] font-semibold tracking-[.16em] transition-colors duration-300 ${light ? 'text-white/68' : 'text-[#6B756E]'}`}>
-          PREMIUM INDIAN RICE SINCE 1998
-        </small>
-      </span>
+    <Link href="/" className="flex shrink-0 items-center" aria-label="Shree Krishna Exports home">
+      <Image
+        src="/images/shree-krishna-exports-logo.svg"
+        alt="Shree Krishna Exports - Premium Indian Rice Since 1998"
+        width={600}
+        height={176}
+        priority={!footer}
+        className={`h-auto object-contain ${
+          footer
+            ? 'w-[230px] sm:w-[260px] drop-shadow-[0_1px_1px_rgba(255,255,255,.35)]'
+            : 'w-[160px] sm:w-[200px] lg:w-[220px]'
+        } ${light ? 'drop-shadow-[0_2px_5px_rgba(0,0,0,.28)]' : ''}`}
+      />
     </Link>
   );
 }

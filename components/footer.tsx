@@ -15,7 +15,7 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1320px] px-5 py-16 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.25fr_.75fr_.75fr_.75fr_1.25fr]">
           <div>
-            <div className="brightness-0 invert"><Logo /></div>
+            <Logo footer />
             <p className="mt-5 max-w-xs text-[11.5px] leading-6 text-white/60">ISO-certified manufacturer and exporter of Indian Basmati, Non-Basmati and pesticide-free rice since 1998.</p>
           </div>
 
