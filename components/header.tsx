@@ -37,13 +37,13 @@ export function Header() {
       <header
         className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
           overHero
-            ? 'border-white/10 bg-[#072e1c]/18 text-white backdrop-blur-[10px]'
-            : 'border-black/[.06] bg-[#fffdf8]/96 text-[#1f2923] shadow-[0_8px_28px_rgba(22,36,27,.07)] backdrop-blur-xl'
+            ? 'border-white/15 bg-transparent text-white backdrop-blur-[5px]'
+            : 'border-black/[.06] bg-[#FFFDF8]/96 text-[#1F2923] shadow-[0_8px_28px_rgba(22,36,27,.07)] backdrop-blur-xl'
         }`}
       >
         <div
           className={`mx-auto flex w-full max-w-[1320px] items-center gap-5 px-5 transition-all duration-300 sm:px-8 md:px-10 lg:px-12 xl:px-16 ${
-            scrolled ? 'h-[72px]' : 'h-[82px]'
+            scrolled ? 'h-[72px]' : 'h-[80px]'
           }`}
         >
           <Logo light={overHero} />
@@ -80,8 +80,8 @@ export function Header() {
             href="/contact"
             className={`ml-auto hidden h-[42px] items-center gap-2 rounded-[8px] px-4 text-[11.5px] font-semibold transition duration-300 xl:flex ${
               overHero
-                ? 'border border-white/35 bg-white/[.08] text-white backdrop-blur-md hover:bg-white/[.15]'
-                : 'bg-[#0B4A2B] text-white hover:-translate-y-0.5 hover:bg-[#073c23]'
+                ? 'border border-white/40 bg-white/[.06] text-white backdrop-blur-md hover:bg-white/[.12]'
+                : 'bg-[#0B4A2B] text-white hover:-translate-y-0.5 hover:bg-[#073C23]'
             }`}
           >
             Enquiry Now <ArrowUpRight size={14} />
