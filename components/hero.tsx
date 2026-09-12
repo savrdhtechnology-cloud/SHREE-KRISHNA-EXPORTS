@@ -7,16 +7,16 @@ export function Hero() {
     <section className="relative isolate min-h-[700px] overflow-hidden bg-[#0B4A2B] text-white md:min-h-[720px] lg:h-[740px] lg:min-h-0">
       <Image
         src="https://www.sbricemill.com/wp-content/uploads/2026/06/banner-3-sb.webp"
-        alt="Indian paddy fields in warm natural light"
+        alt="Premium Indian basmati rice"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-center"
+        className="object-cover object-[68%_center] lg:object-[72%_center]"
       />
 
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,34,19,.96)_0%,rgba(5,45,25,.86)_31%,rgba(5,48,27,.60)_49%,rgba(7,59,34,.25)_68%,rgba(7,59,34,.07)_86%,transparent_100%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,32,20,.08)_0%,transparent_48%,rgba(3,31,18,.70)_100%)]" />
-      <div className="grain absolute inset-0 opacity-[.08]" />
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(3,31,18,.97)_0%,rgba(4,37,21,.91)_28%,rgba(5,45,25,.72)_44%,rgba(5,48,27,.40)_58%,rgba(5,48,27,.10)_76%,rgba(5,48,27,.02)_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,32,20,.16)_0%,transparent_42%,rgba(3,31,18,.62)_100%)]" />
+      <div className="grain absolute inset-0 opacity-[.06]" />
 
       <div className="relative mx-auto grid h-full min-h-[700px] w-full max-w-[1320px] items-center px-5 pb-12 pt-[112px] sm:px-8 md:min-h-[720px] md:px-10 lg:min-h-0 lg:grid-cols-[1.08fr_.92fr] lg:px-12 lg:pb-10 lg:pt-[102px] xl:px-16">
         <div className="animate-hero relative z-20 max-w-[700px] self-center lg:pb-3">
@@ -51,20 +51,9 @@ export function Hero() {
         </div>
 
         <div className="pointer-events-none relative hidden h-[540px] lg:block">
-          <div className="absolute inset-y-0 -right-14 w-[610px] xl:-right-8 xl:w-[640px]">
-            <div className="absolute bottom-[16%] right-[9%] h-[250px] w-[380px] rounded-full bg-black/18 blur-[48px]" />
-            <Image
-              src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=1400&q=92"
-              alt="Premium long-grain basmati rice served in a bowl"
-              fill
-              sizes="640px"
-              className="object-cover object-center [filter:drop-shadow(0_28px_36px_rgba(0,0,0,.24))] [mask-image:radial-gradient(ellipse_at_52%_52%,#000_42%,rgba(0,0,0,.96)_55%,rgba(0,0,0,.72)_65%,transparent_80%)]"
-            />
-          </div>
-
-          <div className="absolute bottom-[62px] right-0 w-[245px] border border-white/45 bg-[#FBF5E7]/90 px-5 py-4 text-[#183223] shadow-[0_14px_34px_rgba(0,0,0,.16)] backdrop-blur-xl xl:right-2">
+          <div className="absolute bottom-[70px] right-[2%] w-[255px] rounded-[2px] border border-white/45 bg-[#FBF5E7]/94 px-5 py-4.5 text-[#183223] shadow-[0_18px_42px_rgba(0,0,0,.18)] backdrop-blur-xl xl:right-[4%]">
             <p className="text-[10px] font-bold tracking-[.18em] text-[#927024]">PREMIUM BASMATI</p>
-            <p className="mt-2 font-serif text-[25px] font-semibold leading-none">Extra Long Grain</p>
+            <p className="mt-2 font-serif text-[26px] font-semibold leading-none">Extra Long Grain</p>
             <p className="mt-2 text-[11px] leading-5 text-[#4C5B51]">Aromatic • Aged • Export Quality</p>
           </div>
         </div>
