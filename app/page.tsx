@@ -7,4 +7,20 @@ import { QualitySection } from '@/components/quality-section';
 import { InfrastructureSection } from '@/components/infrastructure-section';
 import { GlobalExportSection } from '@/components/global-export-section';
 import { EnquirySection } from '@/components/enquiry-section';
-export default function Home(){return <><Hero/><TrustBar/><AboutSection/><ProductGrid/><ProcessSection/><QualitySection/><InfrastructureSection/><GlobalExportSection/><EnquirySection/></>}
+import { HomeReveal } from '@/components/home-reveal';
+
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <HomeReveal direction="up"><TrustBar /></HomeReveal>
+      <HomeReveal direction="left" delay={40}><AboutSection /></HomeReveal>
+      <HomeReveal direction="up" delay={70}><ProductGrid /></HomeReveal>
+      <HomeReveal direction="right" delay={60}><ProcessSection /></HomeReveal>
+      <HomeReveal direction="up" delay={60}><QualitySection /></HomeReveal>
+      <HomeReveal direction="left" delay={70}><InfrastructureSection /></HomeReveal>
+      <HomeReveal direction="zoom" delay={50}><GlobalExportSection /></HomeReveal>
+      <HomeReveal direction="up" delay={40}><EnquirySection /></HomeReveal>
+    </>
+  );
+}
