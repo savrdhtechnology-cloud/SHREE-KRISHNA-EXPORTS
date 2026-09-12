@@ -24,13 +24,72 @@ body{
 .section-pad{padding:96px 0}
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
 .grain{background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E")}
-.animate-hero{animation:heroIn .72s cubic-bezier(.2,.7,.2,1) both}
+
+/* Homepage scroll reveal */
+.home-reveal{
+  opacity:0;
+  transform:translate3d(0,34px,0) scale(.992);
+  transition:
+    opacity .88s cubic-bezier(.2,.72,.22,1),
+    transform .88s cubic-bezier(.2,.72,.22,1);
+  transition-delay:var(--reveal-delay,0ms);
+  will-change:opacity,transform;
+}
+.home-reveal--left{transform:translate3d(-42px,20px,0) scale(.994)}
+.home-reveal--right{transform:translate3d(42px,20px,0) scale(.994)}
+.home-reveal--zoom{transform:translate3d(0,18px,0) scale(.965)}
+.home-reveal[data-visible='true']{opacity:1;transform:translate3d(0,0,0) scale(1)}
+
+/* Hero entrance and ambient movement */
+.hero-image-motion{animation:heroImageDrift 15s ease-in-out infinite alternate;transform-origin:68% 48%}
+.hero-light-sweep{animation:heroSweep 10s ease-in-out infinite alternate}
+.hero-kicker,.hero-title,.hero-copy,.hero-actions,.hero-card-float{
+  opacity:0;
+  animation:heroElementIn .82s cubic-bezier(.18,.74,.22,1) forwards;
+}
+.hero-kicker{animation-delay:.12s}
+.hero-title{animation-delay:.22s}
+.hero-copy{animation-delay:.36s}
+.hero-actions{animation-delay:.50s}
+.hero-card-float{animation-delay:.72s}
+.hero-card-float{animation-name:heroCardIn,heroCardFloat;animation-duration:.82s,5.8s;animation-delay:.72s,1.6s;animation-timing-function:cubic-bezier(.18,.74,.22,1),ease-in-out;animation-fill-mode:forwards,both;animation-iteration-count:1,infinite}
+.hero-gold-shimmer{
+  color:transparent;
+  background:linear-gradient(100deg,#D9AA35 0%,#F7DC89 35%,#E2B84E 58%,#F4D77D 76%,#D9AA35 100%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  animation:goldShimmer 5.5s ease-in-out 1s infinite;
+}
 
 .process-runner{animation:processRunner 3.8s cubic-bezier(.45,0,.25,1) .55s both}
 .process-glow{animation:processGlow 7s ease-in-out infinite alternate}
 .enquiry-orbit{animation:enquiryOrbit 18s linear infinite}
 
-@keyframes heroIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes heroElementIn{
+  from{opacity:0;transform:translate3d(0,22px,0)}
+  to{opacity:1;transform:translate3d(0,0,0)}
+}
+@keyframes heroCardIn{
+  from{opacity:0;transform:translate3d(28px,18px,0) scale(.94)}
+  to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+}
+@keyframes heroCardFloat{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-8px,0)}
+}
+@keyframes heroImageDrift{
+  0%{transform:scale(1.015) translate3d(0,0,0)}
+  100%{transform:scale(1.075) translate3d(-1.2%,.6%,0)}
+}
+@keyframes heroSweep{
+  0%{transform:translate3d(-14%,0,0);opacity:.14}
+  100%{transform:translate3d(12%,0,0);opacity:.32}
+}
+@keyframes goldShimmer{
+  0%,18%{background-position:100% 50%}
+  58%,100%{background-position:0 50%}
+}
 @keyframes processRunner{
   0%{left:5%;opacity:0;transform:scale(.7)}
   8%{opacity:1}
@@ -49,8 +108,11 @@ body{
 @media(max-width:767px){
   .section-pad{padding:68px 0}
   .eyebrow{font-size:10px;letter-spacing:.2em}
+  .home-reveal,.home-reveal--left,.home-reveal--right,.home-reveal--zoom{transform:translate3d(0,22px,0) scale(.995)}
+  .home-reveal[data-visible='true']{transform:none}
 }
 
 @media(prefers-reduced-motion:reduce){
   *{scroll-behavior:auto!important;animation:none!important;transition-duration:.01ms!important}
+  .home-reveal,.hero-kicker,.hero-title,.hero-copy,.hero-actions,.hero-card-float{opacity:1!important;transform:none!important}
 }
