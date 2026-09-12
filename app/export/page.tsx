@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { FileCheck2, Globe2, PackageCheck, Ship } from 'lucide-react';
 import { PageHero } from '@/components/page-hero';
 import { company } from '@/data/company';
 import { EnquirySection } from '@/components/enquiry-section';
+import { AnimatedExportMap } from '@/components/animated-export-map';
 
 export const metadata: Metadata = {
   title: 'Global Export',
@@ -46,19 +46,17 @@ export default function Export() {
               <p className="mt-5 text-[14px] leading-7 text-[#68726b]">The company website references business across the USA / North America, Africa, Europe, Australia, the Middle East and multiple Asian markets.</p>
               <div className="mt-6 flex flex-wrap gap-2">
                 {company.markets.map((market) => (
-                  <span key={market} className="rounded-full bg-white px-4 py-2 text-[11px] font-semibold shadow-sm">{market}</span>
+                  <span key={market} className="border border-[#D7CFBB] bg-white px-4 py-2 text-[11px] font-semibold transition duration-300 hover:-translate-y-0.5 hover:border-[#D4A63A]">{market}</span>
                 ))}
               </div>
             </div>
 
-            <div className="rounded-[28px] bg-white p-5 shadow-[0_20px_50px_rgba(20,45,31,.08)]">
-              <Image src="/images/world-map.svg" alt="Global export regions map" width={900} height={420} />
-            </div>
+            <AnimatedExportMap />
           </div>
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {exportFeatures.map(({ Icon, title, description }) => (
-              <div key={title} className="rounded-2xl border border-[#ded7c6] bg-white p-6">
+              <div key={title} className="rounded-2xl border border-[#ded7c6] bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-[#D4A63A]">
                 <Icon className="text-[#D4A63A]" />
                 <h3 className="mt-4 font-serif text-3xl font-semibold">{title}</h3>
                 <p className="mt-2 text-[12px] leading-6 text-[#68726b]">{description}</p>
